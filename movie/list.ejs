@@ -9,9 +9,29 @@
 </head>
 
 <body>
-  <h1>Hello
-    <%= movies %>
-  </h1>
+  <h1>My fancy movie database</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>title</th>
+        <th>year</th>
+      </tr>
+    </thead>
+    <% for(let i = 0; i < movies.length; i++) {%>
+      <tr>
+        <td>
+          <%= movies[i].id %>
+        </td>
+        <td>
+          <%= movies[i].title %>
+        </td>
+        <td>
+          <%= movies[i].year %>
+        </td>
+      </tr>
+      <%}%>
+  </table>
 </body>
 
 </html>
