@@ -12,6 +12,11 @@ app.get('/', (req, res) => {
   res.send('Hallo Welt');
 });
 
+app.get('/test/:id', (req, res) => {
+  console.log(req.params.id);
+  res.redirect('/movie/');
+});
+
 app.use('/movie', router);
 
 const listener = app.listen(8080, () => {
