@@ -4,6 +4,8 @@ const router = require('./movie');
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
   res.send('Hallo Welt');
 });
