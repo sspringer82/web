@@ -1,14 +1,22 @@
 const express = require('express');
-
+const bodyParser = require('body-parser');
 const router = require('./movie');
 
 const app = express();
 
+app.use((req, res, next) => {
+  console.log('incoming request');
+  //res.send('foo');
+  next();
+});
+
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded());
 
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
+  // req.body => formular
   res.send('Hallo Welt');
 });
 

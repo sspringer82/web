@@ -7,5 +7,6 @@ const router = express.Router();
 router.get('/', controller.listAction);
 // req.url: /movie/delete/1
 router.get('/delete/:id', controller.deleteAction);
+// Schritt 1 Neue Route
 
 module.exports = router;

@@ -12,4 +12,10 @@ function deleteAction(req, res) {
   model.delete(id);
   res.redirect(req.baseUrl);
 }
+
+// Schritt 2 neue Action
+// Schritt 3 neues Template
+// Schritt 4 erweiterung Model
+// Schritt 5 weiterleitung auf Liste
+
 module.exports = { listAction, deleteAction };
