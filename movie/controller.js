@@ -13,9 +13,17 @@ function deleteAction(req, res) {
   res.redirect(req.baseUrl);
 }
 
-// Schritt 2 neue Action
-// Schritt 3 neues Template
-// Schritt 4 erweiterung Model
-// Schritt 5 weiterleitung auf Liste
+function formAction(req, res) {
+  res.render(__dirname + '/form.ejs');
+}
+function saveAction(req, res) {
+  model.save(req.body);
+  res.redirect(req.baseUrl);
+}
 
-module.exports = { listAction, deleteAction };
+module.exports = {
+  listAction,
+  deleteAction,
+  formAction,
+  saveAction,
+};

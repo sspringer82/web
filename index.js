@@ -11,6 +11,8 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static('public'));
+
+// BODY PARSER
 app.use(bodyParser.urlencoded());
 
 app.set('view engine', 'ejs');

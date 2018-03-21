@@ -11,4 +11,8 @@ module.exports = {
   delete(id) {
     data = data.filter(item => item.id !== id);
   },
+  save(movie) {
+    const nextId = Math.max.apply(null, data.map(item => item.id)) + 1;
+    data.push({ ...movie, id: nextId });
+  },
 };
