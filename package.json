@@ -16,7 +16,9 @@
     "url": "https://github.com/sspringer82/web/issues"
   },
   "homepage": "https://github.com/sspringer82/web#readme",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.16.3"
+  },
   "devDependencies": {
     "nodemon": "^1.17.2"
   }
