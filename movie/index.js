@@ -1,9 +1,8 @@
 const express = require('express');
+const controller = require('./controller');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('Liste');
-});
+router.get('/', controller.listAction);
 
 module.exports = router;
