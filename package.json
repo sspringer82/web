@@ -18,7 +18,8 @@
   "homepage": "https://github.com/sspringer82/web#readme",
   "dependencies": {
     "ejs": "^2.5.7",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
     "nodemon": "^1.17.2"

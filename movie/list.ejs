@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <script src="jquery.min.js"></script>
 </head>
 
 <body>
@@ -17,24 +18,27 @@
         <th>ID</th>
         <th>title</th>
         <th>year</th>
+        <th></th>
       </tr>
     </thead>
-    <% for(let i = 0; i < movies.length; i++) {%>
-      <tr>
-        <td>
-          <%= movies[i].id %>
-        </td>
-        <td>
-          <%= movies[i].title %>
-        </td>
-        <td>
-          <%= movies[i].year %>
-        </td>
-        <td>
-          <a href="movie/delete/<%= movies[i].id %>">löschen</a>
-        </td>
-      </tr>
-      <%}%>
+    <tbody>
+      <% for(let i = 0; i < movies.length; i++) {%>
+        <tr>
+          <td>
+            <%= movies[i].id %>
+          </td>
+          <td>
+            <%= movies[i].title %>
+          </td>
+          <td>
+            <%= movies[i].year %>
+          </td>
+          <td>
+            <a href="<%= baseUrl %>/delete/<%= movies[i].id %>">löschen</a>
+          </td>
+        </tr>
+        <%}%>
+    </tbody>
   </table>
 </body>
 
